@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magisches Dreieck</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main {
+            text-align: center;
+            margin-top: 20px;
+            width: 80%;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .left {
+            width: 300px;
+        }
+
+        .right {
+            width: 300px;
+        }
+
+        .center {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .symbols {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .symbols div {
+            text-align: center;
+        }
+
+        .account-statement {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .calendar div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        .calendar .crossed {
+            color: red;
+            font-weight: bold;
+        }
+
+        .reviews {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .review-container {
+            margin-top: 10px;
+        }
+
+        .review {
+            margin-bottom: 10px;
+        }
+
+        .review .username {
+            font-family: 'Dancing Script', cursive;
+            font-style: italic;
+            color: black;
+        }
+
+        .explanation {
+            margin-top: 40px;
+            width: 80%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <h1>Magisches Dreieck: Zielkonflikt Simulation</h1>
+    <p>In diesem Spiel produzierst du Fahrräder. Bewege das Fahrrad-Symbol im Dreieck, um zu sehen, wie sich Kosten, Qualität und Zeit auf die Produktion und Kundenzufriedenheit auswirken!</p>
+</div>
+
+<div class="content">
+    <div class="left">
+        <div class="symbols">
+            <div>
+                <div id="costSymbol" class="visual-symbol cost-symbol">💰</div>
+                <p>Kosten</p>
+            </div>
+            <div>
+                <div id="qualitySymbol" class="visual-symbol quality-symbol">🏆</div>
+                <p>Qualität</p>
+            </div>
+            <div>
+                <div id="timeSymbol" class="visual-symbol time-symbol">⏱️</div>
+                <p>Zeit</p>
+            </div>
+        </div>
+
+        <div class="account-statement">
+            <h3>Firmenguthaben</h3>
+            <div id="accountBalance" class="account-balance">1000 €</div>
+        </div>
+    </div>
+
+    <div class="center">
+        <canvas id="triangleCanvas" width="500" height="500"></canvas>
+    </div>
+
+    <div class="right">
+        <div class="reviews">
+            <h3>Bewertungen der Kunden:</h3>
+            <div id="reviewSection" class="review-container">
+                <div class="review">
+                    <p class="username">Max Mustermann</p>
+                    <p id="reviewText">Die Qualität der Fahrräder ist fantastisch!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar" id="calendar"></div>
+    </div>
+</div>
+
+<div class="explanation">
+    <p>Das magische Dreieck ist ein Modell, das in vielen wissenschaftlichen und praktischen Bereichen wie Projektmanagement, Logistik und Betriebswirtschaftslehre verwendet wird. Es stellt die Zielkonflikte zwischen drei zentralen Faktoren dar: Kosten, Qualität und Zeit. Die Herausforderung besteht darin, dass es nahezu unmöglich ist, alle drei Faktoren gleichzeitig zu maximieren, da Verbesserungen in einem Bereich oft zu Kompromissen in den anderen führen.</p>
+    <p><strong>1. Kosten:</strong> Kostenoptimierung bedeutet die Minimierung der finanziellen Aufwendungen bei gleichzeitiger Sicherstellung der anderen Faktoren. Dies könnte durch Effizienzsteigerungen, Automatisierung oder die Verwendung kostengünstiger Materialien erreicht werden. Allerdings können zu niedrige Kosten die Qualität beeinträchtigen oder die Produktionszeit verlängern.</p>
+    <p><strong>2. Qualität:</strong> Qualität bezieht sich auf die Güte und Langlebigkeit des Produkts oder der Dienstleistung. Eine hohe Qualität erfordert oft den Einsatz hochwertiger Materialien und intensivere Arbeitsprozesse, was wiederum die Kosten erhöht und die Produktionszeit verlängern kann.</p>
+    <p><strong>3. Zeit:</strong> Zeit steht für die Geschwindigkeit, mit der ein Produkt hergestellt oder eine Dienstleistung erbracht wird. Eine Reduzierung der Produktionszeit erfordert oft höhere Kosten für beschleunigte Prozesse oder kann zu Abstrichen bei der Qualität führen.</p>
+    <p>Dieses Spannungsfeld zwischen Kosten, Qualität und Zeit zwingt Unternehmen dazu, ihre Prioritäten basierend auf ihren Zielen, Kundenanforderungen und Marktbedingungen sorgfältig abzuwägen. Das magische Dreieck verdeutlicht die Notwendigkeit, strategische Entscheidungen zu treffen und ihre Auswirkungen auf die anderen Dimensionen zu verstehen.</p>
+</div>
+
+<script>
+    const canvas = document.getElementById('triangleCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const A = { x: 250, y: 50 }; // Spitze des Dreiecks
+    const B = { x: 50, y: 450 }; // Linke Ecke des Dreiecks
+    const C = { x: 450, y: 450 }; // Rechte Ecke des Dreiecks
+
+    const point = { x: 250, y: 250 }; // Startpunkt
+
+    const reviews = [
+        "Fantastisches Fahrrad, ich bin begeistert!",
+        "Die Qualität ist wirklich beeindruckend.",
+        "Sehr robust und langlebig, klare Empfehlung.",
+        "Gute Verarbeitung, aber etwas teuer.",
+        "Die Verarbeitung ist in Ordnung.",
+        "Nicht das Beste, aber akzeptabel.",
+        "Die Qualität lässt leider zu wünschen übrig.",
+        "Das Fahrrad ging nach kurzer Zeit kaputt.",
+        "Sehr enttäuscht, definitiv keine Empfehlung.",
+        "Katastrophal, ich werde es zurückgeben."
+    ];
+
+    function drawTriangle() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.beginPath();
+        ctx.moveTo(A.x, A.y);
+        ctx.lineTo(B.x, B.y);
+        ctx.lineTo(C.x, C.y);
+        ctx.closePath();
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ctx.font = '16px Playfair Display';
+        ctx.fillStyle = 'black';
+        ctx.fillText('Qualität', A.x - 30, A.y - 10);
+        ctx.fillText('Kosten', B.x - 40, B.y + 20);
+        ctx.fillText('Zeit', C.x + 10, C.y + 20);
+
+        ctx.font = '30px Arial';
+        ctx.fillText('🚴', point.x - 15, point.y + 10);
+    }
+
+    function isPointInTriangle(px, py, A, B, C) {
+        const area = Math.abs((A.x * (B.y - C.y) + B.x * (C.y - A.y) + C.x * (A.y - B.y)) / 2);
+        const area1 = Math.abs((px * (B.y - C.y) + B.x * (C.y - py) + C.x * (py - B.y)) / 2);
+        const area2 = Math.abs((A.x * (py - C.y) + px * (C.y - A.y) + C.x * (A.y - py)) / 2);
+        const area3 = Math.abs((A.x * (B.y - py) + B.x * (py - A.y) + px * (A.y - B.y)) / 2);
+
+        return area === (area1 + area2 + area3);
+    }
+
+    function updateMetrics() {
+        const distToA = Math.hypot(point.x - A.x, point.y - A.y);
+        const distToB = Math.hypot(point.x - B.x, point.y - B.y);
+        const distToC = Math.hypot(point.x - C.x, point.y - C.y);
+        const maxDist = Math.hypot(B.x - A.x, B.y - A.y);
+
+        const quality = Math.round((1 - distToA / maxDist) * 100);
+        const cost = Math.round((1 - distToB / maxDist) * 100);
+        const time = Math.round((1 - distToC / maxDist) * 100);
+
+        document.getElementById('qualitySymbol').style.fontSize = `${30 + quality / 3}px`;
+        document.getElementById('costSymbol').style.fontSize = `${30 + cost / 3}px`;
+        document.getElementById('timeSymbol').style.fontSize = `${30 + time / 3}px`;
+
+        let accountBalance = 1000 - cost * 5;
+
+        // Adjust balance to go negative earlier at 30% cost level
+        if (cost >= 30) {
+            accountBalance -= (cost - 30) * 10;
+        }
+
+        const accountElement = document.getElementById('accountBalance');
+        accountElement.textContent = `${accountBalance} €`;
+        if (accountBalance < 0) {
+            accountElement.classList.add('negative');
+            accountElement.style.color = 'red';
+        } else {
+            accountElement.classList.remove('negative');
+            accountElement.style.color = 'black';
+        }
+
+        const reviewIndex = Math.max(0, Math.min(9, Math.floor((100 - quality) / 10)));
+        document.getElementById('reviewText').textContent = reviews[reviewIndex];
+
+        renderCalendar(time);
+    }
+
+    function renderCalendar(time) {
+        const calendarContainer = document.getElementById('calendar');
+        calendarContainer.innerHTML = '';
+        const daysInMonth = 30;
+        const crossedDays = Math.floor((100 - time) / 100 * daysInMonth);
+
+        for (let i = 1; i <= daysInMonth; i++) {
+            const dayDiv = document.createElement('div');
+            dayDiv.textContent = i;
+            if (i <= crossedDays) {
+                dayDiv.classList.add('crossed');
+                dayDiv.textContent = '✖';
+            }
+            calendarContainer.appendChild(dayDiv);
+        }
+    }
+
+    canvas.addEventListener('mousedown', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+        const distance = Math.hypot(mouseX - point.x, mouseY - point.y);
+
+        if (distance < 20) {
+            isDragging = true;
+        }
+    });
+
+    canvas.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+
+        const rect = canvas.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+
+        if (isPointInTriangle(mouseX, mouseY, A, B, C)) {
+            point.x = mouseX;
+            point.y = mouseY;
+            updateMetrics();
+        }
+
+        drawTriangle();
+    });
+
+    canvas.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+
+    drawTriangle();
+    updateMetrics();
+</script>
+</body>
+</html>
