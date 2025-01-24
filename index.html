@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -325,3 +325,590 @@
 </script>
 </body>
 </html>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Abstand zwischen den Modellen */
+    }
+</style>
+
+<div class="container">
+    <div></div>
+    <div></div>
+</div>
+
+<div class="explanation">
+    <h2>ABC- und XYZ-Analyse</h2>
+
+    <h3>ABC-Analyse</h3>
+    <p>
+        Die ABC-Analyse ist ein bewährtes Werkzeug, das Unternehmen dabei unterstützt, ihre Materialien oder Produkte nach ihrem finanziellen Wert zu priorisieren. Ziel ist es, Ressourcen und Aufmerksamkeit auf die Artikel zu konzentrieren, die den größten Einfluss auf das Unternehmen haben.
+    </p>
+    <ul style="text-align: left; margin: 0 auto; max-width: 800px;">
+        <li><strong>A-Artikel:</strong> Diese Artikel machen typischerweise 75–80% des Gesamtwerts aus, obwohl sie oft nur etwa 20% der Menge ausmachen. Sie sind strategisch äußerst wichtig und erfordern besondere Aufmerksamkeit in der Beschaffung und Lagerung.</li>
+        <li><strong>B-Artikel:</strong> B-Artikel repräsentieren in der Regel 15–20% des Gesamtwerts und etwa 30% der Menge. Sie haben eine mittlere Bedeutung und können mit standardisierten Prozessen effizient verwaltet werden.</li>
+        <li><strong>C-Artikel:</strong> Diese Artikel machen nur 5% des Gesamtwerts aus, sind aber oft in großen Mengen vorhanden (ca. 50%). Ihre Verwaltung kann durch Automatisierung oder Bündelung effizient gestaltet werden.</li>
+    </ul>
+    <div class="image-container">
+        <img src="abc-graph.png" alt="ABC-Analyse Diagramm">
+        <p class="caption">Abbildung: ABC-Analyse – Darstellung der Wert- und Mengenverteilung</p>
+    </div>
+    <p>
+        Unternehmen verwenden die ABC-Analyse, um sicherzustellen, dass ihre Lagerbestände und Bestellprozesse optimal auf die strategischen Ziele ausgerichtet sind. Beispielsweise könnten teure Komponenten wie Fahrradrahmen als A-Artikel behandelt werden, während Schrauben als C-Artikel klassifiziert werden.
+    </p>
+
+    <h3>XYZ-Analyse</h3>
+    <p>
+        Die XYZ-Analyse ergänzt die ABC-Analyse, indem sie den Fokus auf die Planbarkeit und Vorhersagegenauigkeit des Verbrauchs legt. Materialien werden basierend auf ihrem Verbrauchsverhalten kategorisiert:
+    </p>
+    <ul style="text-align: left; margin: 0 auto; max-width: 800px;">
+        <li><strong>X-Materialien:</strong> Diese Materialien weisen einen konstanten und gut vorhersagbaren Verbrauch auf, z. B. Schrauben oder Standardteile.</li>
+        <li><strong>Y-Materialien:</strong> Y-Teile zeigen saisonale oder schwankende Verbräuche, wie Helme oder Zubehör, das von der Jahreszeit abhängt.</li>
+        <li><strong>Z-Materialien:</strong> Z-Teile haben einen stark unregelmäßigen und schwer planbaren Verbrauch, z. B. Spezialanfertigungen oder Ersatzteile für seltene Modelle.</li>
+    </ul>
+    <p>
+        Die XYZ-Analyse hilft dabei, Lieferketten flexibler zu gestalten und Lagerbestände besser zu planen. Unternehmen können für X-Teile langfristige Verträge abschließen und für Z-Teile auf bedarfsorientierte Beschaffung setzen.
+    </p>
+
+    <h3>Kombinierte ABC/XYZ-Analyse</h3>
+    <p>
+        Durch die Kombination der ABC- und XYZ-Analyse können Unternehmen eine noch detailliertere Klassifizierung vornehmen. Diese Methode führt zu einer 9-Felder-Matrix, die sowohl den finanziellen Wert als auch die Planbarkeit eines Artikels berücksichtigt:
+    </p>
+    <ul style="text-align: left; margin: 0 auto; max-width: 800px;">
+        <li><strong>A-X:</strong> Hoher Wertanteil, konstanter Bedarf. Höchste Priorität für strategisches Management und langfristige Verträge.</li>
+        <li><strong>B-Y:</strong> Mittlerer Wertanteil, schwankender Bedarf. Flexible Planungsstrategien und saisonale Anpassungen sind notwendig.</li>
+        <li><strong>C-Z:</strong> Geringer Wertanteil, unregelmäßiger Bedarf. Automatisierung oder Outsourcing können hier Kosten sparen.</li>
+    </ul>
+    <div class="image-container">
+        <img src="abc-xyz-matrix.png" alt="ABC-XYZ-Matrix">
+        <p class="caption">Abbildung: Kombination von ABC- und XYZ-Analyse</p>
+    </div>
+    <p>
+        Diese kombinierte Analyse ist besonders wertvoll in der Produktionswirtschaft, da sie nicht nur die Kosteneffizienz, sondern auch die Lieferfähigkeit und Flexibilität erhöht. Ein Fahrradhersteller könnte beispielsweise hochpreisige und schwer vorhersehbare Spezialkomponenten in die Kategorie A-Z einordnen und besonders überwachen.
+    </p>
+</div>
+
+<style>
+    .explanation {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1200px;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        text-align: center; /* Zentrierung des gesamten Blocks */
+    }
+
+    .explanation h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .explanation h3 {
+        font-size: 22px;
+        margin-top: 30px;
+    }
+
+    .image-container {
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .image-container img {
+        max-width: 60%; /* Skaliert Bilder auf 60% der Containerbreite */
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .caption {
+        font-size: 14px;
+        color: #555;
+        margin-top: 5px;
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 20px;
+        text-align: left; /* Links ausgerichtet innerhalb des zentrierten Blocks */
+    }
+
+    p {
+        text-align: justify; /* Angenehmerer Textfluss */
+    }
+</style>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Abstand zwischen den Modellen */
+    }
+</style>
+
+<div class="container">
+    <div></div>
+    <div></div>
+</div>
+<div class="explanation">
+    <h2>Lean Management – Verschwendungsanalyse</h2>
+
+    <h3>Was ist eine Verschwendungsanalyse?</h3>
+    <p>
+        Die Verschwendungsanalyse ist ein zentraler Bestandteil des Lean Managements. Ziel ist es, alle Tätigkeiten und Prozesse zu identifizieren, die keinen direkten Mehrwert für den Kunden schaffen.
+        Verschwendung (japanisch: "Muda") bezeichnet alle ineffizienten Abläufe, die zu höheren Kosten, längeren Durchlaufzeiten oder geringerer Qualität führen.
+    </p>
+    <p>
+        Ziel der Analyse ist es, diese Verschwendungen systematisch zu reduzieren oder zu eliminieren, um eine effizientere und schlankere Produktion zu gewährleisten.
+    </p>
+
+    <h4>Die 7 Verschwendungsarten</h4>
+    <ul style="text-align: left; display: inline-block;">
+        <li><strong>Überproduktion:</strong> Herstellung von mehr Produkten, als der Markt benötigt.</li>
+        <li><strong>Wartezeiten:</strong> Zeitverluste durch Verzögerungen in Produktionsschritten.</li>
+        <li><strong>Transport:</strong> Unnötige Bewegungen von Materialien oder Produkten.</li>
+        <li><strong>Bestände:</strong> Lagerung von Materialien, die nicht sofort benötigt werden.</li>
+        <li><strong>Bewegung:</strong> Unnötige Bewegungen von Mitarbeitern oder Maschinen.</li>
+        <li><strong>Nacharbeit:</strong> Fehlerhafte Produkte, die Korrekturen erfordern.</li>
+        <li><strong>Ungenutzte Kreativität:</strong> Nicht genutztes Wissen und Können der Mitarbeiter.</li>
+    </ul>
+
+    <h3>Fallstudie: Optimierung der Fahrradproduktion</h3>
+    <p>
+        Ein Fahrradhersteller möchte seine Montagelinie optimieren. Im Produktionsprozess wurden mehrere Probleme identifiziert, die analysiert und gelöst werden sollen.
+    </p>
+
+    <div class="case-study">
+        <h4>Produktionsschritte</h4>
+        <ol style="text-align: left; display: inline-block;">
+            <li><strong>Rahmenmontage:</strong> Der Rahmen wird geschweißt und lackiert.</li>
+            <li><strong>Anbringung von Komponenten:</strong> Bremsen, Gangschaltung und Reifen werden montiert.</li>
+            <li><strong>Qualitätskontrolle:</strong> Jeder Schritt wird überprüft.</li>
+            <li><strong>Verpackung:</strong> Das fertige Fahrrad wird verpackt und für den Versand vorbereitet.</li>
+        </ol>
+
+        <h4>Identifizierte Probleme</h4>
+        <form id="wasteForm">
+            <div class="problem">
+                <p><strong>1. Wartezeiten:</strong> Der Lack des Rahmens benötigt zu lange, um zu trocknen.</p>
+                <label for="solution1">Dein Lösungsvorschlag:</label>
+                <textarea id="solution1" placeholder="Trage hier deinen Lösungsvorschlag ein..." rows="2"></textarea>
+            </div>
+            <div class="problem">
+                <p><strong>2. Transportwege:</strong> Mitarbeiter legen unnötig weite Wege zurück.</p>
+                <label for="solution2">Dein Lösungsvorschlag:</label>
+                <textarea id="solution2" placeholder="Trage hier deinen Lösungsvorschlag ein..." rows="2"></textarea>
+            </div>
+            <div class="problem">
+                <p><strong>3. Bestände:</strong> Zu viele Komponenten werden bereitgestellt, was zu Lagerproblemen führt.</p>
+                <label for="solution3">Dein Lösungsvorschlag:</label>
+                <textarea id="solution3" placeholder="Trage hier deinen Lösungsvorschlag ein..." rows="2"></textarea>
+            </div>
+            <div class="problem">
+                <p><strong>4. Nacharbeit:</strong> Fehler in der Qualitätskontrolle führen zu Nacharbeiten.</p>
+                <label for="solution4">Dein Lösungsvorschlag:</label>
+                <textarea id="solution4" placeholder="Trage hier deinen Lösungsvorschlag ein..." rows="2"></textarea>
+            </div>
+            <button type="button" onclick="showSuggestions()">Lösungen anzeigen</button>
+        </form>
+
+        <div id="suggestions" style="margin-top: 20px;"></div>
+    </div>
+</div>
+
+<script>
+    function showSuggestions() {
+        const solutions = [
+            "Verwendung eines Schnell-Trocknungslacks oder Anpassung des Produktionsplans.",
+            "Neuorganisation der Montagelinie nach dem U-Layout, um Wege zu minimieren.",
+            "Einführung eines Kanban-Systems zur bedarfsgerechten Bereitstellung von Komponenten.",
+            "Einsatz von Poka-Yoke-Techniken zur Fehlervermeidung (z. B. Vorrichtungen für korrekte Montage)."
+        ];
+
+        const userSolutions = [
+            document.getElementById("solution1").value,
+            document.getElementById("solution2").value,
+            document.getElementById("solution3").value,
+            document.getElementById("solution4").value
+        ];
+
+        const suggestionsDiv = document.getElementById("suggestions");
+        suggestionsDiv.innerHTML = `
+            <h4>Unsere Vorschläge:</h4>
+            <ol style="text-align: left; display: inline-block;">
+                ${solutions.map((suggestion, index) => `
+                    <li>
+                        <p><strong>Problem ${index + 1}:</strong> ${userSolutions[index] ? `<em>Dein Vorschlag:</em> ${userSolutions[index]}` : "Kein Vorschlag eingegeben."}</p>
+                        <p><em>Unser Vorschlag:</em> ${suggestion}</p>
+                    </li>
+                `).join("")}
+            </ol>
+        `;
+    }
+</script>
+
+<style>
+    .explanation {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1200px;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .explanation h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .explanation h3, .explanation h4 {
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+    ul, ol {
+        margin-left: 20px;
+        text-align: left;
+        display: inline-block;
+    }
+
+    .case-study {
+        margin-top: 20px;
+    }
+
+    .problem {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    textarea {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #28a745;
+    }
+
+    #suggestions {
+        font-size: 16px;
+        text-align: center;
+    }
+</style>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Abstand zwischen den Modellen */
+    }
+    <div class="explanation">
+    <h2>Kanban-Methode – Eine Einführung</h2>
+
+    <h3>Was ist die Kanban-Methode?</h3>
+    <p>
+     Die Kanban-Methode ist ein Framework für das Workflow-Management, das Prozesse visualisiert und optimiert. Ziel ist es, Effizienz und Flexibilität zu steigern, indem Aufgaben systematisch organisiert und Engpässe erkannt werden. Der Begriff „Kanban“ stammt aus dem Japanischen und bedeutet „Schild“ oder „Tafel“.
+    </p>
+    <p>
+     Die Methode wurde ursprünglich von Toyota in der Produktion eingeführt, um den Materialfluss zu steuern. Heute wird sie in vielen Bereichen eingesetzt, wie z. B. in der Fertigung, Softwareentwicklung und im Projektmanagement. Kanban hilft Teams, Aufgaben zu priorisieren, den Fortschritt zu überwachen und kontinuierliche Verbesserungen umzusetzen.
+    </p>
+
+    <h4>Die Prinzipien der Kanban-Methode</h4>
+    <ul style="text-align: left; display: inline-block;">
+    <li><strong>Visualisierung:</strong> Aufgaben werden auf einer Kanban-Tafel dargestellt, um den Fortschritt zu verfolgen.</li>
+    <li><strong>Begrenzung der parallelen Arbeit:</strong> Die Anzahl der Aufgaben, die gleichzeitig bearbeitet werden, wird begrenzt (Work In Progress, WIP).</li>
+    <li><strong>Fokus auf den Workflow:</strong> Der Arbeitsprozess wird kontinuierlich überwacht und Engpässe werden identifiziert.</li>
+    <li><strong>Klare Regeln:</strong> Es werden klare Regeln für die Aufgabenbearbeitung definiert.</li>
+    <li><strong>Kontinuierliche Verbesserung:</strong> Prozesse werden regelmäßig evaluiert und optimiert.</li>
+    </ul>
+
+    <h3>Fallstudie: Einführung eines Kanban-Systems in der Fahrradproduktion</h3>
+    <p>
+     Ein Fahrradhersteller möchte die Produktion mit der Kanban-Methode optimieren. Ziel ist es, den Workflow zu verbessern, Engpässe zu erkennen und die Anzahl der parallelen Aufgaben zu begrenzen.
+    </p>
+
+    <h4>Interaktive Kanban-Tafel</h4>
+    <p>
+     Verschiebe die Aufgaben durch die Produktionsphasen, um zu sehen, wie Kanban den Arbeitsfluss optimiert. Achte darauf, dass in der Spalte „In Bearbeitung“ maximal zwei Aufgaben gleichzeitig bearbeitet werden können.
+    </p>
+
+    <div class="kanban-board">
+    <div class="column" id="todo" ondragover="allowDrop(event)" ondrop="drop(event)">
+    <h4>Zu erledigen</h4>
+    <div class="task" id="task1" draggable="true" ondragstart="drag(event)">Fahrradrahmen montieren</div>
+    <div class="task" id="task2" draggable="true" ondragstart="drag(event)">Komponenten montieren</div>
+    <div class="task" id="task3" draggable="true" ondragstart="drag(event)">Qualitätsprüfung</div>
+    <div class="task" id="task4" draggable="true" ondragstart="drag(event)">Verpackung</div>
+    </div>
+    <div class="column" id="inProgress" ondragover="allowDrop(event)" ondrop="drop(event)">
+    <h4>In Bearbeitung (max. 2)</h4>
+    </div>
+    <div class="column" id="done" ondragover="allowDrop(event)" ondrop="drop(event)">
+    <h4>Fertiggestellt</h4>
+    </div>
+    </div>
+    </div>
+
+    <script>
+     function allowDrop(event) {
+    event.preventDefault();
+    }
+
+    function drag(event) {
+    event.dataTransfer.setData("text", event.target.id);
+    }
+
+    function drop(event) {
+    event.preventDefault();
+        const taskId = event.dataTransfer.getData("text");
+        const targetColumn = event.target.closest(".column");
+        const task = document.getElementById(taskId);
+
+    // Begrenzung paralleler Arbeit (WIP)
+    if (targetColumn.id === "inProgress" && targetColumn.children.length >= 3) {
+    alert("Maximal 2 Aufgaben können gleichzeitig bearbeitet werden.");
+        return;
+    }
+
+    targetColumn.appendChild(task);
+    }
+    </script>
+
+    <style>
+     .explanation {
+         font-size: 16px;
+         line-height: 1.6;
+         margin: 0 auto;
+         width: 90%;
+         max-width: 1200px;
+         background-color: #f9f9f9;
+         padding: 20px;
+         border: 1px solid #ddd;
+         border-radius: 8px;
+         text-align: center;
+     }
+
+    .explanation h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .explanation h3, .explanation h4 {
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+    ul, ol {
+        margin-left: 20px;
+        text-align: left;
+        display: inline-block;
+    }
+
+    .kanban-board {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .column {
+        width: 30%;
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+        min-height: 200px;
+    }
+
+    .column h4 {
+        margin-top: 0;
+        font-size: 18px;
+    }
+
+    .task {
+        background-color: #28a745; /* Grün für Aufgaben */
+        color: white;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: grab;
+    }
+
+    .task:active {
+        cursor: grabbing;
+    }
+</style>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Abstand zwischen den Modellen */
+    }
+</style>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Abstand zwischen den Modellen */
+    }
+</style>
+
+<div class="container">
+    <div></div>
+    <div></div>
+</div>
+<div class="explanation">
+    <h2>Kanban-Methode – Eine Einführung</h2>
+
+    <h3>Was ist die Kanban-Methode?</h3>
+    <p>
+        Die Kanban-Methode ist ein Framework für das Workflow-Management, das Prozesse visualisiert und optimiert. Ziel ist es, Effizienz und Flexibilität zu steigern, indem Aufgaben systematisch organisiert und Engpässe erkannt werden. Der Begriff „Kanban“ stammt aus dem Japanischen und bedeutet „Schild“ oder „Tafel“.
+    </p>
+    <p>
+        Die Methode wurde ursprünglich von Toyota in der Produktion eingeführt, um den Materialfluss zu steuern. Heute wird sie in vielen Bereichen eingesetzt, wie z. B. in der Fertigung, Softwareentwicklung und im Projektmanagement. Kanban hilft Teams, Aufgaben zu priorisieren, den Fortschritt zu überwachen und kontinuierliche Verbesserungen umzusetzen.
+    </p>
+
+    <h4>Die Prinzipien der Kanban-Methode</h4>
+    <ul style="text-align: left; display: inline-block;">
+        <li><strong>Visualisierung:</strong> Aufgaben werden auf einer Kanban-Tafel dargestellt, um den Fortschritt zu verfolgen.</li>
+        <li><strong>Begrenzung der parallelen Arbeit:</strong> Die Anzahl der Aufgaben, die gleichzeitig bearbeitet werden, wird begrenzt (Work In Progress, WIP).</li>
+        <li><strong>Fokus auf den Workflow:</strong> Der Arbeitsprozess wird kontinuierlich überwacht und Engpässe werden identifiziert.</li>
+        <li><strong>Klare Regeln:</strong> Es werden klare Regeln für die Aufgabenbearbeitung definiert.</li>
+        <li><strong>Kontinuierliche Verbesserung:</strong> Prozesse werden regelmäßig evaluiert und optimiert.</li>
+    </ul>
+
+    <h3>Fallstudie: Einführung eines Kanban-Systems in der Fahrradproduktion</h3>
+    <p>
+        Ein Fahrradhersteller möchte die Produktion mit der Kanban-Methode optimieren. Ziel ist es, den Workflow zu verbessern, Engpässe zu erkennen und die Anzahl der parallelen Aufgaben zu begrenzen.
+    </p>
+
+    <h4>Interaktive Kanban-Tafel</h4>
+    <p>
+        Verschiebe die Aufgaben durch die Produktionsphasen, um zu sehen, wie Kanban den Arbeitsfluss optimiert. Achte darauf, dass in der Spalte „In Bearbeitung“ maximal zwei Aufgaben gleichzeitig bearbeitet werden können.
+    </p>
+
+    <div class="kanban-board">
+        <div class="column" id="todo" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <h4>Zu erledigen</h4>
+            <div class="task" id="task1" draggable="true" ondragstart="drag(event)">Fahrradrahmen montieren</div>
+            <div class="task" id="task2" draggable="true" ondragstart="drag(event)">Komponenten montieren</div>
+            <div class="task" id="task3" draggable="true" ondragstart="drag(event)">Qualitätsprüfung</div>
+            <div class="task" id="task4" draggable="true" ondragstart="drag(event)">Verpackung</div>
+        </div>
+        <div class="column" id="inProgress" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <h4>In Bearbeitung (max. 2)</h4>
+        </div>
+        <div class="column" id="done" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <h4>Fertiggestellt</h4>
+        </div>
+    </div>
+</div>
+
+<script>
+    function allowDrop(event) {
+        event.preventDefault();
+    }
+
+    function drag(event) {
+        event.dataTransfer.setData("text", event.target.id);
+    }
+
+    function drop(event) {
+        event.preventDefault();
+        const taskId = event.dataTransfer.getData("text");
+        const targetColumn = event.target.closest(".column");
+        const task = document.getElementById(taskId);
+
+        // Begrenzung paralleler Arbeit (WIP)
+        if (targetColumn.id === "inProgress" && targetColumn.children.length >= 3) {
+            alert("Maximal 2 Aufgaben können gleichzeitig bearbeitet werden.");
+            return;
+        }
+
+        targetColumn.appendChild(task);
+    }
+</script>
+
+<style>
+    .explanation {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1200px;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .explanation h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .explanation h3, .explanation h4 {
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+    ul, ol {
+        margin-left: 20px;
+        text-align: left;
+        display: inline-block;
+    }
+
+    .kanban-board {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .column {
+        width: 30%;
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+        min-height: 200px;
+    }
+
+    .column h4 {
+        margin-top: 0;
+        font-size: 18px;
+    }
+
+    .task {
+        background-color: #28a745; /* Grün für Aufgaben */
+        color: white;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: grab;
+    }
+
+    .task:active {
+        cursor: grabbing;
+    }
+</style>
